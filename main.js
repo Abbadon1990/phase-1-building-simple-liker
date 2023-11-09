@@ -3,6 +3,32 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
+function changeError () {
+  let toggleHidden = document.getElementById('modal')
+  if (toggleHidden.classList.contains("hidden")) {
+    toggleHidden.classList.remove('hidden')
+  }
+  else{
+    toggleHidden.classList.add('hidden')
+  }
+}
+changeError()
+
+const likeBtn = document.querySelector('span.like-glyph')
+likeBtn.addEventListener('click', e => {
+   mimicServerCall()
+  .then((promise) => {
+    return console.log('pass')})
+  .catch(() => {
+    changeError()
+    let error = document.querySelector('modle.h2')
+    
+  })
+  
+})
+
+
+
 
 
 
